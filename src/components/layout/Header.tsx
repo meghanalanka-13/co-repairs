@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import coRepairsLogo from "@/assets/co-repairs-logo.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -16,11 +17,8 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">CR</span>
-          </div>
-          <span className="font-semibold text-lg text-foreground">Co-Repairs</span>
+        <Link to="/" className="flex items-center">
+          <img src={coRepairsLogo} alt="Co-Repairs" className="h-8 rounded" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

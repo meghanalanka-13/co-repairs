@@ -9,6 +9,7 @@ import {
   HelpCircle,
   LogOut,
 } from "lucide-react";
+import coRepairsLogo from "@/assets/co-repairs-logo.png";
 
 const navItems = [
   { label: "Overview", href: "/portal", icon: LayoutDashboard },
@@ -24,11 +25,8 @@ export function PortalSidebar() {
 
   return (
     <aside className="w-64 bg-card border-r border-border min-h-screen p-6 flex flex-col">
-      <Link to="/" className="flex items-center gap-2 mb-10">
-        <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-          <span className="text-primary-foreground font-bold text-sm">CR</span>
-        </div>
-        <span className="font-semibold text-foreground">Co-Repairs</span>
+      <Link to="/" className="flex items-center mb-10">
+        <img src={coRepairsLogo} alt="Co-Repairs" className="h-9 rounded" />
       </Link>
 
       <nav className="flex-1 space-y-1">
