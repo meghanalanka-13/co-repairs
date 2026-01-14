@@ -50,10 +50,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        copper: {
-          DEFAULT: "hsl(var(--copper))",
-          light: "hsl(var(--copper-light))",
-          dark: "hsl(var(--copper-dark))",
+        "dark-accent": {
+          DEFAULT: "hsl(var(--dark-accent))",
+          light: "hsl(var(--dark-accent-light))",
+          hover: "hsl(var(--dark-accent-hover))",
         },
         charcoal: "hsl(var(--charcoal))",
         stone: "hsl(var(--stone))",
