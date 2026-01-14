@@ -18,8 +18,8 @@
     --popover: 40 25% 98%;
     --popover-foreground: 220 15% 15%;
 
-    /* Primary - Copper Accent */
-    --primary: 25 55% 48%;
+    /* Primary - Translucent Black */
+    --primary: 220 15% 15%;
     --primary-foreground: 40 30% 97%;
 
     /* Secondary - Stone Grey */
@@ -30,9 +30,9 @@
     --muted: 40 10% 94%;
     --muted-foreground: 220 10% 45%;
 
-    /* Accent - Subtle Copper */
-    --accent: 25 40% 94%;
-    --accent-foreground: 25 55% 35%;
+    /* Accent - Subtle Dark */
+    --accent: 220 10% 94%;
+    --accent-foreground: 220 15% 20%;
 
     /* Destructive */
     --destructive: 0 65% 50%;
@@ -41,24 +41,24 @@
     /* Borders - Stone Grey */
     --border: 40 12% 88%;
     --input: 40 12% 88%;
-    --ring: 25 55% 48%;
+    --ring: 220 15% 15%;
 
     --radius: 0.75rem;
 
     /* Sidebar */
     --sidebar-background: 40 20% 98%;
     --sidebar-foreground: 220 15% 25%;
-    --sidebar-primary: 25 55% 48%;
+    --sidebar-primary: 220 15% 15%;
     --sidebar-primary-foreground: 40 30% 97%;
-    --sidebar-accent: 40 15% 94%;
+    --sidebar-accent: 220 10% 94%;
     --sidebar-accent-foreground: 220 15% 20%;
     --sidebar-border: 40 12% 90%;
-    --sidebar-ring: 25 55% 48%;
+    --sidebar-ring: 220 15% 15%;
 
     /* Custom tokens */
-    --copper: 25 55% 48%;
-    --copper-light: 25 40% 94%;
-    --copper-dark: 25 55% 38%;
+    --dark-accent: 220 15% 15%;
+    --dark-accent-light: 220 10% 94%;
+    --dark-accent-hover: 220 15% 25%;
     --charcoal: 220 15% 15%;
     --stone: 40 8% 75%;
     --ivory: 40 30% 97%;
@@ -81,8 +81,8 @@
 }
 
 @layer utilities {
-  .text-gradient-copper {
-    @apply bg-gradient-to-r from-[hsl(25,55%,48%)] to-[hsl(30,50%,55%)] bg-clip-text text-transparent;
+  .text-gradient-dark {
+    @apply bg-gradient-to-r from-[hsl(220,15%,15%)] to-[hsl(220,15%,30%)] bg-clip-text text-transparent;
   }
 
   .shadow-soft {
