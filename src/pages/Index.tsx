@@ -32,10 +32,13 @@ const Index = () => {
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 animate-fade-in">
-            Reimagining Post-Sales{" "}
-            <span className="text-gradient-copper">Service Infrastructure</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-6 animate-fade-in">
+            Co-Repairs
           </h1>
+          <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground/80 leading-snug mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+            Reimagining Post-Sales{" "}
+            <span className="text-foreground">Service Infrastructure</span>
+          </p>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             A shared authorized service-center ecosystem for appliance and electronics brands.
           </p>
