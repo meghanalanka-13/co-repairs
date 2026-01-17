@@ -32,10 +32,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground tracking-tight mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-6 animate-fade-in">
             Co-Repairs.
           </h1>
-          <p className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground/80 leading-snug mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+          <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground/80 leading-snug mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
             Reimagining Post-Sales{" "}
             <span className="text-foreground">Service Infrastructure</span>
           </p>
