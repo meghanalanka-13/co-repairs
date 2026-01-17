@@ -2,7 +2,7 @@ import { PortalLayout } from "@/components/portal/PortalLayout";
 import { Button } from "@/components/ui/button";
 import { BarChart3, ExternalLink } from "lucide-react";
 
-const ANALYTICS_URL = "https://your-shiny-app-url.com"; // Replace with your actual Shiny app URL
+const ANALYTICS_URL = "https://app-library.shinyapps.io/ServiSense/";
 
 export default function PortalAnalytics() {
   return (
