@@ -31,25 +31,26 @@ const Index = () => {
     <MainLayout>
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-10 animate-fade-in">
-            Co-Repairs.
+        <div className="container mx-auto max-w-5xl text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground tracking-tight mb-8 animate-fade-in leading-tight">
+            Reimagining Post-Sales
+            <br />
+            Service Infrastructure
           </h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground/80 leading-snug mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
-            Reimagining Post-Sales{" "}
-            <span className="text-foreground">Service Infrastructure</span>
+          <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto mb-6 leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            A unified, brand-authorized service ecosystem that replaces fragmented post-sales operations with standardized, scalable infrastructure.
           </p>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            A shared authorized service-center ecosystem for appliance and electronics brands.
+          <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: "0.15s" }}>
+            Under one professionally managed roof, your service centers gain modern facilities, trained manpower, and structured processes — enabling lower costs, better operational control, and consistently higher service quality for your customers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <Link to="/ecosystem">
-              <Button variant="hero" size="xl">
+              <Button variant="hero" size="xl" className="px-10">
                 Explore Ecosystem
               </Button>
             </Link>
             <Link to="/partner">
-              <Button variant="heroOutline" size="xl">
+              <Button variant="heroOutline" size="xl" className="px-10">
                 Partner With Us
               </Button>
             </Link>
@@ -108,7 +109,7 @@ const Index = () => {
             Join leading brands in our shared service ecosystem and deliver exceptional customer experiences.
           </p>
           <Link to="/partner">
-            <Button variant="hero" size="xl">
+            <Button variant="hero" size="xl" className="px-10">
               Start Partnership Conversation
             </Button>
           </Link>
