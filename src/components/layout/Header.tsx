@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import coRepairsLogo from "@/assets/co-repairs-logo.png";
 
 const navItems = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/home" },
   { label: "Ecosystem", href: "/ecosystem" },
   { label: "Benefits", href: "/benefits" },
   { label: "Sustainability", href: "/sustainability" },
