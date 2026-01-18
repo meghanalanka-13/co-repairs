@@ -20,6 +20,12 @@ const productCategories = [
   "Other",
 ];
 
+const serviceTypes = [
+  "Chat Support",
+  "Talk to an Agent",
+  "Request a Technician Visit",
+];
+
 const BookService = () => {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -30,6 +36,7 @@ const BookService = () => {
     city: "",
     brand: "",
     productCategory: "",
+    serviceType: "",
     issueDescription: "",
   });
 
@@ -37,15 +44,15 @@ const BookService = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSelectChange = (value: string) => {
-    setFormData({ ...formData, productCategory: value });
+  const handleSelectChange = (field: string) => (value: string) => {
+    setFormData({ ...formData, [field]: value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate required fields
-    if (!formData.name || !formData.email || !formData.phone || !formData.city || !formData.brand || !formData.productCategory || !formData.issueDescription) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.city || !formData.brand || !formData.productCategory || !formData.serviceType || !formData.issueDescription) {
       toast({
         title: "Please fill all fields",
         description: "All fields are required to submit your request.",
@@ -85,7 +92,7 @@ const BookService = () => {
               Thank you for contacting Co-Repairs. Our team will review your request and get back to you within 24 hours.
             </p>
             <Link to="/">
-              <Button variant="hero" size="lg">
+              <Button variant="hero" size="lg" className="px-8">
                 Back to Home
               </Button>
             </Link>
@@ -182,7 +189,7 @@ const BookService = () => {
 
               <div className="space-y-2">
                 <Label htmlFor="productCategory">Product Category</Label>
-                <Select onValueChange={handleSelectChange} value={formData.productCategory}>
+                <Select onValueChange={handleSelectChange("productCategory")} value={formData.productCategory}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select category" />
                   </SelectTrigger>
@@ -195,6 +202,22 @@ const BookService = () => {
                   </SelectContent>
                 </Select>
               </div>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="serviceType">Preferred Service Type</Label>
+              <Select onValueChange={handleSelectChange("serviceType")} value={formData.serviceType}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select service type" />
+                </SelectTrigger>
+                <SelectContent>
+                  {serviceTypes.map((type) => (
+                    <SelectItem key={type} value={type}>
+                      {type}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="space-y-2">
