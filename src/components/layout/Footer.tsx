@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-4">
-            <img src={coRepairsLogo} alt="Co-Repairs" className="h-10 rounded" />
+            <img src={coRepairsLogo} alt="Co-Repairs." className="h-10 rounded" />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Building a better post-sales service ecosystem.
             </p>

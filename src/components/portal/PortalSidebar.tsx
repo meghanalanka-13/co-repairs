@@ -26,7 +26,7 @@ export function PortalSidebar() {
   return (
     <aside className="w-64 bg-card border-r border-border min-h-screen p-6 flex flex-col">
       <Link to="/" className="flex items-center mb-10">
-        <img src={coRepairsLogo} alt="Co-Repairs" className="h-9 rounded" />
+        <img src={coRepairsLogo} alt="Co-Repairs." className="h-9 rounded" />
       </Link>
 
       <nav className="flex-1 space-y-1">
