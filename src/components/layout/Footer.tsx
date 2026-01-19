@@ -28,7 +28,7 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-sm text-muted-foreground">Email: support@corepairs.com</li>
+              <li className="text-sm text-muted-foreground">Email: support@co-repairs.com</li>
               <li className="text-sm text-muted-foreground">Phone: +91 XXXXX XXXXX</li>
             </ul>
           </div>
