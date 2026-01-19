@@ -23,7 +23,7 @@ export default function Login() {
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold">CR</span>
             </div>
-            <span className="font-semibold text-xl text-foreground">Co-Repairs</span>
+            <span className="font-semibold text-xl text-foreground">Co-Repairs.</span>
           </Link>
           <h1 className="text-2xl font-semibold text-foreground mb-2">Partner Portal</h1>
           <p className="text-muted-foreground">Sign in to access your dashboard</p>

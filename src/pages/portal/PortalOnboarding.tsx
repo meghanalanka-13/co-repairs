@@ -60,7 +60,7 @@ export default function PortalOnboarding() {
   return (
     <PortalLayout
       title="Onboarding Status"
-      description="Track your integration progress with Co-Repairs"
+      description="Track your integration progress with Co-Repairs."
     >
       <div className="bg-card rounded-2xl border border-border shadow-soft p-8">
         <div className="flex items-center justify-between mb-8">

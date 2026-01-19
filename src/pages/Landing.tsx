@@ -8,7 +8,7 @@ const goalMissionVision = [
     id: "goal",
     title: "Our Goal",
     content: [
-      "At Co-Repairs, our goal is to fundamentally improve the post-sales service experience for both customers and brands. We bring multiple brand-authorized service centers together under one shared, well-designed service hub to make repairs more accessible, reliable, and transparent.",
+      "At Co-Repairs., our goal is to fundamentally improve the post-sales service experience for both customers and brands. We bring multiple brand-authorized service centers together under one shared, well-designed service hub to make repairs more accessible, reliable, and transparent.",
       "We reduce the friction customers face when locating trusted service centers, dealing with delays, or navigating outdated service environments. At the same time, we support brands with modern infrastructure, skilled manpower, and shared operational spaces that lower costs while raising service standards.",
       "Our ultimate aim is to create a service ecosystem where repairs are easier, trust is stronger, and both customers and brands benefit from a more organized, professional, and visible post-sales network.",
     ],
@@ -88,7 +88,7 @@ const Landing = () => {
           {/* Logo + Navigation Links - Left */}
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center">
-              <img src={coRepairsLogo} alt="Co-Repairs" className="h-8 rounded" />
+              <img src={coRepairsLogo} alt="Co-Repairs." className="h-8 rounded" />
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">
@@ -144,7 +144,7 @@ const Landing = () => {
           </p>
           
           <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Co-Repairs is a shared authorized service hub ecosystem designed to improve post-sales service for appliance and electronics brands. We bring multiple authorized service centers together under one roof to make repairs faster, more reliable, and more accessible.
+            Co-Repairs. is a shared authorized service hub ecosystem designed to improve post-sales service for appliance and electronics brands. We bring multiple authorized service centers together under one roof to make repairs faster, more reliable, and more accessible.
           </p>
 
           {/* Pill Buttons */}
