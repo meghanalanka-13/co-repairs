@@ -8,8 +8,15 @@ export default function PortalAnalytics() {
   return (
     <PortalLayout
       title="Co-Repairs Command Center"
-      description="Real-time operational intelligence for partner brands"
+      description="Real-time operational intelligence for partner brands."
     >
+      {/* ServiSense Description */}
+      <div className="mb-8">
+        <p className="text-muted-foreground leading-relaxed">
+          <span className="font-semibold text-foreground">ServiSense</span> is our analytics command center designed to bring clarity to post-sales operations. It uses predictive models to estimate appliance failure risk, forecast service demand, and guide inventory and workforce planning — helping our partners improve efficiency, reduce downtime, and protect revenue.
+        </p>
+      </div>
+
       <div className="bg-card rounded-2xl border border-border shadow-soft p-12 text-center">
         <div className="w-20 h-20 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-6">
           <BarChart3 className="w-10 h-10 text-primary" />

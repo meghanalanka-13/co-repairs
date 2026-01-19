@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Target, Compass, Eye, Shield, Building2, Wrench, Users, ArrowRight } from "lucide-react";
+import { Shield, Building2, Users, ArrowRight } from "lucide-react";
 import coRepairsLogo from "@/assets/co-repairs-logo.png";
 
 const goalMissionVision = [
@@ -72,37 +72,82 @@ const howItWorks = [
   },
 ];
 
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
 const Landing = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Minimal Header */}
+      {/* Header with Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-center">
+        <div className="container mx-auto px-8 h-16 flex items-center justify-between">
+          {/* Logo - Left */}
           <Link to="/" className="flex items-center">
             <img src={coRepairsLogo} alt="Co-Repairs" className="h-8 rounded" />
           </Link>
+
+          {/* Center Navigation Links */}
+          <nav className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection("goal")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
+            >
+              Goal
+            </button>
+            <button
+              onClick={() => scrollToSection("mission")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
+            >
+              Mission
+            </button>
+            <button
+              onClick={() => scrollToSection("vision")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
+            >
+              Vision
+            </button>
+          </nav>
+
+          {/* Right-Side Actions */}
+          <div className="flex items-center gap-4">
+            <Link
+              to="/book"
+              className="hidden sm:inline-block text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Book a Service
+            </Link>
+            <Link to="/login">
+              <Button variant="portal" size="sm">
+                Partner Portal (Demo)
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="min-h-[85vh] flex items-center justify-center px-6 pt-16">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-10 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-10 animate-fade-in">
             Co-Repairs.
           </h1>
           
-          <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground/80 leading-snug mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+          <p className="text-xl md:text-2xl lg:text-3xl font-medium text-foreground/80 leading-snug mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
             Authorized Service Centers,
             <br />
             Under One Roof.
           </p>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Co-Repairs is a shared authorized service hub ecosystem designed to improve post-sales service for appliance and electronics brands. We bring multiple authorized service centers together under one roof to make repairs faster, more reliable, and more accessible.
           </p>
 
           {/* Pill Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <Link to="/book">
               <Button variant="hero" size="xl" className="px-10">
                 Book a Service
@@ -114,12 +159,6 @@ const Landing = () => {
               </Button>
             </Link>
           </div>
-
-          {/* Helper Text */}
-          <div className="text-sm text-muted-foreground space-y-1 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <p>Customers: book repairs or register complaints.</p>
-            <p>Brands & partners: explore our shared service ecosystem.</p>
-          </div>
         </div>
       </section>
 
@@ -129,13 +168,24 @@ const Landing = () => {
           {goalMissionVision.map((block, index) => (
             <div
               key={block.id}
+              id={block.id}
               className={`flex flex-col ${block.layout === "header-right" ? "lg:flex-row-reverse" : "lg:flex-row"} gap-12 lg:gap-20 ${index !== goalMissionVision.length - 1 ? "mb-24 pb-24 border-b border-border" : ""}`}
             >
-              {/* Header Block */}
-              <div className="lg:w-1/3 flex items-start">
-                <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-                  {block.title}
-                </h2>
+              {/* Header Block - Glass Card with Centered Text */}
+              <div className="lg:w-1/3 flex">
+                <div 
+                  className="w-full flex items-center justify-center text-center rounded-[20px] p-8 transition-all duration-[180ms] hover:-translate-y-1 hover:shadow-xl cursor-default"
+                  style={{
+                    background: "rgba(0, 0, 0, 0.42)",
+                    border: "1px solid rgba(255, 255, 255, 0.10)",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
+                    backdropFilter: "blur(10px)",
+                  }}
+                >
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    {block.title}
+                  </h2>
+                </div>
               </div>
               
               {/* Content Block */}
@@ -244,7 +294,7 @@ const Landing = () => {
             <div className="space-y-4">
               <h4 className="font-semibold text-foreground">Contact</h4>
               <ul className="space-y-2">
-                <li className="text-sm text-muted-foreground">Email: support@corepairs.com</li>
+                <li className="text-sm text-muted-foreground">Email: support@co-repairs.com</li>
                 <li className="text-sm text-muted-foreground">Phone: +91 XXXXX XXXXX</li>
               </ul>
             </div>
