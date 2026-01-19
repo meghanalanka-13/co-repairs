@@ -85,32 +85,33 @@ const Landing = () => {
       {/* Header with Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-8 h-16 flex items-center justify-between">
-          {/* Logo - Left */}
-          <Link to="/" className="flex items-center">
-            <img src={coRepairsLogo} alt="Co-Repairs" className="h-8 rounded" />
-          </Link>
+          {/* Logo + Navigation Links - Left */}
+          <div className="flex items-center gap-8">
+            <Link to="/" className="flex items-center">
+              <img src={coRepairsLogo} alt="Co-Repairs" className="h-8 rounded" />
+            </Link>
 
-          {/* Center Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("goal")}
-              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
-            >
-              Goal
-            </button>
-            <button
-              onClick={() => scrollToSection("mission")}
-              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
-            >
-              Mission
-            </button>
-            <button
-              onClick={() => scrollToSection("vision")}
-              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
-            >
-              Vision
-            </button>
-          </nav>
+            <nav className="hidden md:flex items-center gap-6">
+              <button
+                onClick={() => scrollToSection("goal")}
+                className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
+              >
+                Goal
+              </button>
+              <button
+                onClick={() => scrollToSection("mission")}
+                className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
+              >
+                Mission
+              </button>
+              <button
+                onClick={() => scrollToSection("vision")}
+                className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
+              >
+                Vision
+              </button>
+            </nav>
+          </div>
 
           {/* Right-Side Actions */}
           <div className="flex items-center gap-4">
@@ -174,12 +175,10 @@ const Landing = () => {
               {/* Header Block - Glass Card with Centered Text */}
               <div className="lg:w-1/3 flex">
                 <div 
-                  className="w-full flex items-center justify-center text-center rounded-[20px] p-8 transition-all duration-[180ms] hover:-translate-y-1 hover:shadow-xl cursor-default"
+                  className="w-full flex items-center justify-center text-center rounded-[20px] p-8 transition-all duration-[180ms] hover:-translate-y-1 hover:shadow-xl cursor-default bg-black"
                   style={{
-                    background: "rgba(0, 0, 0, 0.42)",
                     border: "1px solid rgba(255, 255, 255, 0.10)",
                     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
-                    backdropFilter: "blur(10px)",
                   }}
                 >
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
