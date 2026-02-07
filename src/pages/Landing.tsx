@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, Building2, Users, ArrowRight } from "lucide-react";
 import coRepairsLogo from "@/assets/co-repairs-logo.png";
+import coRepairsHero from "@/assets/co-repairs-hero.png";
 
 const goalMissionVision = [
   {
@@ -131,8 +132,8 @@ const Landing = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="min-h-[85vh] flex items-center justify-center px-6 pt-16">
-        <div className="container mx-auto max-w-4xl text-center">
+      <section className="flex flex-col items-center px-6 pt-24 pb-0">
+        <div className="container mx-auto max-w-4xl text-center mb-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-10 animate-fade-in">
             Co-Repairs.
           </h1>
@@ -143,22 +144,32 @@ const Landing = () => {
             Under One Roof.
           </p>
           
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Co-Repairs. is a shared authorized service hub ecosystem designed to improve post-sales service for appliance and electronics brands. We bring multiple authorized service centers together under one roof to make repairs faster, more reliable, and more accessible.
           </p>
+        </div>
 
-          {/* Pill Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <Link to="/book">
-              <Button variant="hero" size="xl" className="px-10">
-                Book a Service
-              </Button>
-            </Link>
-            <Link to="/home">
-              <Button variant="heroOutline" size="xl" className="px-10">
-                Partner Ecosystem
-              </Button>
-            </Link>
+        {/* Hero Image with Overlaid Buttons */}
+        <div className="container mx-auto max-w-5xl relative animate-fade-in" style={{ animationDelay: "0.15s" }}>
+          <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={coRepairsHero}
+              alt="Co-Repairs. service center with staff at reception"
+              className="w-full h-auto object-cover"
+            />
+            {/* Buttons overlaid at bottom center of image */}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-row gap-4 items-center">
+              <Link to="/book">
+                <Button variant="hero" size="lg" className="px-8 shadow-lg">
+                  Book a Service
+                </Button>
+              </Link>
+              <Link to="/home">
+                <Button variant="heroOutline" size="lg" className="px-8 bg-background/90 backdrop-blur-sm shadow-lg">
+                  Partner Ecosystem
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
