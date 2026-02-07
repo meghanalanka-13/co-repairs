@@ -161,14 +161,14 @@ const Landing = () => {
         </div>
 
         {/* Buttons below image with ample spacing */}
-        <div className="flex flex-row gap-5 justify-center items-center mt-10 mb-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <div className="flex flex-row gap-6 justify-center items-center mt-12 mb-20 animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <Link to="/book">
-            <Button variant="hero" size="lg" className="px-8">
+            <Button variant="hero" size="xl" className="px-12">
               Book a Service
             </Button>
           </Link>
           <Link to="/home">
-            <Button variant="heroOutline" size="lg" className="px-8">
+            <Button variant="heroOutline" size="xl" className="px-12">
               Partner Ecosystem
             </Button>
           </Link>
