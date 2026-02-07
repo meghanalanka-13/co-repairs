@@ -149,28 +149,29 @@ const Landing = () => {
           </p>
         </div>
 
-        {/* Hero Image with Overlaid Buttons */}
-        <div className="container mx-auto max-w-5xl relative animate-fade-in" style={{ animationDelay: "0.15s" }}>
-          <div className="relative rounded-2xl overflow-hidden shadow-xl">
+        {/* Hero Image */}
+        <div className="container mx-auto max-w-5xl animate-fade-in" style={{ animationDelay: "0.15s" }}>
+          <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
               src={coRepairsHero}
               alt="Co-Repairs. service center with staff at reception"
               className="w-full h-auto object-cover"
             />
-            {/* Buttons overlaid at bottom center of image */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-row gap-4 items-center">
-              <Link to="/book">
-                <Button variant="hero" size="lg" className="px-8 shadow-lg">
-                  Book a Service
-                </Button>
-              </Link>
-              <Link to="/home">
-                <Button variant="heroOutline" size="lg" className="px-8 bg-background/90 backdrop-blur-sm shadow-lg">
-                  Partner Ecosystem
-                </Button>
-              </Link>
-            </div>
           </div>
+        </div>
+
+        {/* Buttons below image with ample spacing */}
+        <div className="flex flex-row gap-5 justify-center items-center mt-10 mb-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <Link to="/book">
+            <Button variant="hero" size="lg" className="px-8">
+              Book a Service
+            </Button>
+          </Link>
+          <Link to="/home">
+            <Button variant="heroOutline" size="lg" className="px-8">
+              Partner Ecosystem
+            </Button>
+          </Link>
         </div>
       </section>
 
