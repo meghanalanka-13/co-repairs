@@ -4,31 +4,23 @@ import { Wrench, Clock, CheckCircle, TrendingUp } from "lucide-react";
 
 const kpiData = [
   {
-    title: "Active Service Requests",
-    value: "1,247",
-    change: "+12% from last month",
-    changeType: "positive" as const,
+    title: "Repeat Visit Rate (%)",
+    value: "6.1%",
     icon: <Wrench className="w-5 h-5 text-primary" />,
   },
   {
-    title: "Average Resolution Time",
-    value: "2.3 days",
-    change: "-0.4 days improvement",
-    changeType: "positive" as const,
+    title: "First Visit Resolution Rate (%)",
+    value: "93.9%",
     icon: <Clock className="w-5 h-5 text-primary" />,
   },
   {
-    title: "Customer Satisfaction",
-    value: "94.2%",
-    change: "+1.8% from last quarter",
-    changeType: "positive" as const,
+    title: "Cost of Repeat Visits",
+    value: "≈ ₹ 47,70,000",
     icon: <CheckCircle className="w-5 h-5 text-primary" />,
   },
   {
-    title: "Service Centers Active",
-    value: "48",
-    change: "3 pending onboarding",
-    changeType: "neutral" as const,
+    title: "Stock-Out Rate (%)",
+    value: "5.6%",
     icon: <TrendingUp className="w-5 h-5 text-primary" />,
   },
 ];
