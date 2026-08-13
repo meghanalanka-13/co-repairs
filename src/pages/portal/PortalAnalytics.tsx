@@ -2,7 +2,7 @@ import { PortalLayout } from "@/components/portal/PortalLayout";
 import { Button } from "@/components/ui/button";
 import { BarChart3, ExternalLink } from "lucide-react";
 
-const ANALYTICS_URL = "https://app-library.shinyapps.io/ServiSense/";
+const ANALYTICS_URL = "https://servisense.streamlit.app";
 
 export default function PortalAnalytics() {
   return (
