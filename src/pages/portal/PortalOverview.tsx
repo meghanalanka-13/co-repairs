@@ -4,23 +4,23 @@ import { Wrench, Clock, CheckCircle, TrendingUp } from "lucide-react";
 
 const kpiData = [
   {
-    title: "Repeat Visit Rate (%)",
-    value: "6.1%",
+    title: "Repeat Visit Rate (per visit)",
+    value: "7.5%",
     icon: <Wrench className="w-5 h-5 text-primary" />,
   },
   {
-    title: "First Visit Resolution Rate (%)",
-    value: "93.9%",
+    title: "First-Visit Resolution Rate",
+    value: "78.7%",
     icon: <Clock className="w-5 h-5 text-primary" />,
   },
   {
-    title: "Cost of Repeat Visits",
-    value: "≈ ₹ 47,70,000",
+    title: "Est. Cost of Repeat Visits (all-time)",
+    value: "₹ 1,14,58,400",
     icon: <CheckCircle className="w-5 h-5 text-primary" />,
   },
   {
-    title: "Stock-Out Rate (%)",
-    value: "5.6%",
+    title: "Stock-Out Rate",
+    value: "7.5%",
     icon: <TrendingUp className="w-5 h-5 text-primary" />,
   },
 ];
