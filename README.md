@@ -1,73 +1,175 @@
-# Welcome to your Lovable project
+# Co-Repairs Hub
 
-## Project info
+Lovable Prompt: Co-Repairs Website + Partner Portal + Analytics (Demo)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Build a premium, minimal website for a company called Co-Repairs with a Partner Portal experience. This is a demo, so authentication does not need to be real.
 
-## How can I edit this code?
+Brand & Style
 
-There are several ways of editing your application.
+Clean, architectural, premium
 
-**Use Lovable**
+Light mode only
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Colours: ivory / warm off-white surfaces, stone grey borders, charcoal text, subtle copper accents
 
-Changes made via Lovable will be committed automatically to this repo.
+Typography: Inter (or similar)
 
-**Use your preferred IDE**
+Rounded corners, soft shadows, generous spacing
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Very corporate and calm — not flashy
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Main Website Navigation
 
-Follow these steps:
+Home
+
+Ecosystem
+
+Benefits
+
+Sustainability
+
+Partner With Us
+
+Partner Portal (button-style CTA)
+
+Pages
+Home
+
+Hero:
+
+Headline: Reimagining Post-Sales Service Infrastructure
+
+Subtext: A shared authorized service-center ecosystem for appliance and electronics brands.
+Buttons:
+
+Explore Ecosystem
+
+Partner With Us
+
+Small link: Partner Portal (Demo)
+
+Ecosystem
+
+Explain:
+
+Shared service centers under one roof
+
+Brand onboarding
+
+Infrastructure, manpower, compliance
+
+SLAs and reporting
+
+Benefits
+
+Split into:
+
+For Brands
+
+For Customers
+
+For Service Partners
+
+Sustainability
+
+Repair-first, reduced waste, circular economy, long product life.
+
+Partner With Us
+
+Simple form:
+
+Brand name
+
+Contact person
+
+City
+
+Email
+
+Partnership intent
+
+Partner Portal (Demo)
+
+Create a product-style internal portal under route /portal.
+
+Demo Login Screen
+
+Route: /login
+
+Email + Password fields
+
+Button: Login (Demo)
+
+On click → redirect to /portal
+
+Show note: Demo portal – authentication disabled
+
+Portal Sidebar Tabs
+
+Overview
+
+Onboarding Status
+
+Service Center Performance
+
+Operational Analytics
+
+Reports
+
+Support
+
+Operational Analytics Tab (Important)
+
+This is the embedded AI command center for Co-Repairs partners.
+
+Title: Co-Repairs Command Center
+
+Subtext: Real-time operational intelligence for partner brands
+
+Embed an iframe using a placeholder URL:
+
+<iframe
+  src="PASTE_ANALYTICS_URL_HERE"
+  style="width:100%; height:900px; border:0; border-radius:18px;"
+></iframe>
+
+
+If no URL is present, show a friendly placeholder card:
+“Add your analytics dashboard link to activate this section.”
+
+Overview Tab
+
+3–4 KPI cards (dummy values)
+
+“Partner health summary”
+
+Reports
+
+Dummy downloadable reports table
+
+Support
+
+Contact form + FAQs
+
+This project was built with [Lovable](https://lovable.dev).
+
+**Live app**: https://co-repairs.lovable.app
+
+## Build with Lovable
+
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/985594dc-443a-4869-bfe5-33e2a951d1ef).
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+git clone <this-repository-url>
+cd <repository-name>
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
