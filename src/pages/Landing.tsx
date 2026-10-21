@@ -74,6 +74,45 @@ const howItWorks = [
   },
 ];
 
+const quickLinks = [
+  { label: "Home", href: "/home" },
+  { label: "Ecosystem", href: "/ecosystem" },
+  { label: "Benefits", href: "/benefits" },
+  { label: "Sustainability", href: "/sustainability" },
+  { label: "Partner Ecosystem", href: "/home" },
+  { label: "Book a Service", href: "/book" },
+];
+
+const QuickLinksDropdown = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all duration-200"
+      >
+        Quick Links
+        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+      </button>
+      {open && (
+        <div className="absolute left-0 top-full mt-3 w-48 rounded-2xl bg-card border border-border shadow-soft-lg p-2 z-50">
+          {quickLinks.map((link) => (
+            <Link
+              key={link.label}
+              to={link.href}
+              onClick={() => setOpen(false)}
+              className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors duration-200"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
