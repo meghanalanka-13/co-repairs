@@ -307,7 +307,7 @@ const Landing = () => {
                   </p>
                 </div>
                 {index < howItWorks.length - 1 && (
-                  <div className="hidden md:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                  <div className="hidden md:flex absolute top-1/2 -right-8 transform -translate-y-1/2 z-10">
                     <ArrowRight className="w-8 h-8 text-muted-foreground/30" />
                   </div>
                 )}
