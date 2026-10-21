@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Shield, Building2, Users, ArrowRight } from "lucide-react";
+import { Shield, Building2, Users, ArrowRight, ChevronDown } from "lucide-react";
 import coRepairsLogo from "@/assets/co-repairs-logo.png";
 import coRepairsHero from "@/assets/co-repairs-hero.png";
 
