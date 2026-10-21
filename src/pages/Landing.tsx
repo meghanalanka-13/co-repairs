@@ -151,6 +151,7 @@ const Landing = () => {
               >
                 Vision
               </button>
+              <QuickLinksDropdown />
             </nav>
           </div>
 
