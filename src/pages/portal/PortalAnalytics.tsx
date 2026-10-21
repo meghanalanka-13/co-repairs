@@ -1,10 +1,11 @@
 import { PortalLayout } from "@/components/portal/PortalLayout";
 import { Button } from "@/components/ui/button";
 import { BarChart3, ExternalLink } from "lucide-react";
-
-const ANALYTICS_URL = "https://servisense.streamlit.app";
+import { useOrg } from "@/context/OrgContext";
 
 export default function PortalAnalytics() {
+  const { analyticsUrl } = useOrg();
+
   return (
     <PortalLayout
       title="Co-Repairs Command Center"
@@ -30,7 +31,7 @@ export default function PortalAnalytics() {
 
         <Button asChild className="gap-2">
           <a
-            href={ANALYTICS_URL}
+            href={analyticsUrl}
             target="_blank"
             rel="noopener noreferrer"
           >

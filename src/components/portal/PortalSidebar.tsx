@@ -1,9 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
-  LayoutDashboard,
   ClipboardList,
-  Building2,
   BarChart3,
   FileText,
   HelpCircle,
@@ -12,9 +10,7 @@ import {
 import coRepairsLogo from "@/assets/co-repairs-logo.png";
 
 const navItems = [
-  { label: "Overview", href: "/portal", icon: LayoutDashboard },
   { label: "Onboarding Status", href: "/portal/onboarding", icon: ClipboardList },
-  { label: "Service Center Performance", href: "/portal/performance", icon: Building2 },
   { label: "Operational Analytics", href: "/portal/analytics", icon: BarChart3 },
   { label: "Reports", href: "/portal/reports", icon: FileText },
   { label: "Support", href: "/portal/support", icon: HelpCircle },

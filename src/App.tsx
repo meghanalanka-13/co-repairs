@@ -18,11 +18,13 @@ import PortalAnalytics from "./pages/portal/PortalAnalytics";
 import PortalReports from "./pages/portal/PortalReports";
 import PortalSupport from "./pages/portal/PortalSupport";
 import NotFound from "./pages/NotFound";
+import { OrgProvider } from "./context/OrgContext";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <OrgProvider>
     <TooltipProvider>
       <Toaster />
       <Sonner />
@@ -45,7 +47,8 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </TooltipProvider>
+      </TooltipProvider>
+    </OrgProvider>
   </QueryClientProvider>
 );
 

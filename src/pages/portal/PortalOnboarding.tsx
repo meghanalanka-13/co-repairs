@@ -1,6 +1,7 @@
 import { PortalLayout } from "@/components/portal/PortalLayout";
 import { CheckCircle2, Clock, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useOrg } from "@/context/OrgContext";
 
 const onboardingSteps = [
   {
@@ -57,9 +58,11 @@ const statusConfig = {
 };
 
 export default function PortalOnboarding() {
+  const { org } = useOrg();
+
   return (
     <PortalLayout
-      title="Onboarding Status"
+      title={org ? `${org} onboarding status` : "Onboarding Status"}
       description="Track your integration progress with Co-Repairs."
     >
       <div className="bg-card rounded-2xl border border-border shadow-soft p-8">
