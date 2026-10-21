@@ -1,18 +1,43 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Link } from "react-router-dom";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { ORGS, useOrg, type Org } from "@/context/OrgContext";
 
 export default function Login() {
   const navigate = useNavigate();
+  const { setOrg } = useOrg();
+  const [selectedOrg, setSelectedOrg] = useState<Org | null>(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [orgError, setOrgError] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/portal");
+    if (!selectedOrg) {
+      setOrgError(true);
+      return;
+    }
+    setOrgError(false);
+    setOrg(selectedOrg);
+
+    if (selectedOrg === "Co-Repairs") {
+      window.open(
+        "https://servisense.streamlit.app/?org=Co-Repairs",
+        "_blank",
+        "noopener,noreferrer"
+      );
+      return;
+    }
+    navigate("/portal/onboarding");
   };
 
   return (
@@ -37,7 +62,35 @@ export default function Login() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="org">Who are you with?</Label>
+            <Select
+              value={selectedOrg ?? ""}
+              onValueChange={(value) => {
+                setSelectedOrg(value as Org);
+                setOrgError(false);
+              }}
+            >
+              <SelectTrigger
+                id="org"
+                className={orgError ? "border-destructive" : "bg-background"}
+              >
+                <SelectValue placeholder="Select your organisation" />
+              </SelectTrigger>
+              <SelectContent>
+                {ORGS.map((org) => (
+                  <SelectItem key={org} value={org}>
+                    {org}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {orgError && (
+              <p className="text-sm text-destructive">Choose your organisation first.</p>
+            )}
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="email">Company username</Label>
             <Input
               id="email"
               type="email"
@@ -49,7 +102,7 @@ export default function Login() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="password">Company password</Label>
             <Input
               id="password"
               type="password"
@@ -61,7 +114,7 @@ export default function Login() {
           </div>
 
           <Button type="submit" variant="portal" size="lg" className="w-full">
-            Login (Demo)
+            Continue (Demo)
           </Button>
 
           <p className="text-center text-sm text-muted-foreground">
